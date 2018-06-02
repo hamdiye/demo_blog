@@ -1,0 +1,39 @@
+<div id="Tam">
+  <div class="UstPanel">
+      <strong>MyBlog</strong>
+         <h4>Giriş</h4>
+    <div class="navbar">
+      <div class="nav">
+
+
+        <div class="nav-left">
+          <p class="nav-item">
+
+            <h4>Tüm Postlar</h4>
+          </p>
+        </div>
+
+
+        <div class="nav-right">
+          <p class="nav-item">
+             <h4>Hakkımda</h4>
+
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>
+
+
+
+<h1>İndex Page</h1>
+<%= link_to "Create a new post ", new_post_path(@post), class: "button" %> <br>
+<%= @post.each do |post| %>
+<p>bu post</p>
+<%= link_to post.title ,post%><br>
+<%= post.content %><br>
+<%end%>
